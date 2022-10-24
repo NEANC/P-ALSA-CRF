@@ -89,7 +89,7 @@ S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
 
 基于 [碧蓝档案 WIKI 科研策略专题攻略 - 一图流 - 快均衡策略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5#%E4%B8%80%E5%9B%BE%E6%B5%81) 的模板
 
-![](https://patchwiki.biligame.com/images/blhx/0/0a/lj0yqsz6h4q0m1ghb3kqc1b39v9ap97.png)
+## ![](https://patchwiki.biligame.com/images/blhx/0/0a/lj0yqsz6h4q0m1ghb3kqc1b39v9ap97.png)
 
 #### 快均衡模板
 
