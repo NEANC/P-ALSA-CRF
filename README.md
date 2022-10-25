@@ -1,9 +1,11 @@
 # Personal ALSA Custom Research Filter
 
-个人的 [ALSA](https://github.com/LmeSzinc/AzurLaneAutoScript) 自定义科研过滤器
+我个人的 ALAS 自定义科研过滤器
 
 **注意**：  
 **本文仅供参考**，如您**不熟悉**`科研掉落、项目刷新、ALAS自定义科研过滤器`，请使用**ALAS 内置的预优化科研过滤器**。
+
+[ALAS 仓库](https://github.com/LmeSzinc/AzurLaneAutoScript/)
 
 ## ALAS 科研过滤器说明
 
@@ -180,10 +182,10 @@ Q-0.5 > DR-0.5 > PRY-0.5
 - 自定义科研过滤器
 
 ```
-DR-0.5 > S4-Q-0.5 > S4-H-0.5 > PRY-0.5
-> DR-2.5 > DR-8 > DR-5
+DR-0.5 > S4-Q-0.5 > PRY-0.5
+> DR-2.5 > DR-5 > DR-8
 > PRY-2.5 > PRY-5 > PRY-8
-> S4-Q-1 > S4-Q-2 > S4-Q-4
+> Q-0.5 > S4-Q-4 > S4-Q-2 > S4-Q-1
 > S4-G-4 > G-4 > G-1.5
 > C8 > C12
 > reset > cheapest
