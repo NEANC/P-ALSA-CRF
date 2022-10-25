@@ -2,6 +2,9 @@
 
 个人的 [ALSA](https://github.com/LmeSzinc/AzurLaneAutoScript) 自定义科研过滤器
 
+**注意**
+**本文仅供参考**，如您**不熟悉**`科研掉落、项目刷新、ALAS自定义科研过滤器`，请使用**ALAS 内置的预优化科研过滤器**。
+
 ## ALAS 科研过滤器说明
 
 文献来源：  
@@ -59,7 +62,7 @@ PRY - 金船
 
 注意：shortest 和 cheapest 必然会选择一个科研项目，在它们之后的内容将不会被执行。因此，建议科研过滤器以 `> reset > shortest ` 或 `> reset > cheapest ` 结尾，以保证充分利用刷新和防止空选。
 
-#### ALAS 默认科研方案
+#### ALAS 默认自定义科研方案
 
 ```
 S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
@@ -69,7 +72,7 @@ S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
 > S5-C12 > 12
 ```
 
-## 基于 碧蓝档案 WIKI 策略规划参考 的模板
+## 基于 碧蓝档案 WIKI 策略规划参考 一图流 的模板
 
 **注意**:
 
@@ -91,7 +94,7 @@ S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
 
 基于 [碧蓝档案 WIKI 科研策略专题攻略 - 一图流 - 快均衡策略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5#%E4%B8%80%E5%9B%BE%E6%B5%81) 的模板
 
-## ![](https://patchwiki.biligame.com/images/blhx/0/0a/lj0yqsz6h4q0m1ghb3kqc1b39v9ap97.png)
+![一图流 - 快均衡策略](https://patchwiki.biligame.com/images/blhx/0/0a/lj0yqsz6h4q0m1ghb3kqc1b39v9ap97.png "https://patchwiki.biligame.com/images/blhx/0/0a/lj0yqsz6h4q0m1ghb3kqc1b39v9ap97.png")
 
 #### 快均衡模板
 
@@ -110,7 +113,7 @@ DR-0.5 > Q-0.5 > PRY-0.5 > H-0.5
 
 基于 [碧蓝档案 WIKI 科研策略专题攻略 - 一图流 - 慢均衡策略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5#%E4%B8%80%E5%9B%BE%E6%B5%81) 的模板
 
-![](https://patchwiki.biligame.com/images/blhx/0/09/0birkgxyq05hl8xo3w0btfdu7uebhxv.png)
+![一图流 - 慢均衡策略](https://patchwiki.biligame.com/images/blhx/0/09/0birkgxyq05hl8xo3w0btfdu7uebhxv.png "https://patchwiki.biligame.com/images/blhx/0/09/0birkgxyq05hl8xo3w0btfdu7uebhxv.png")
 
 #### 慢均衡模板
 
@@ -128,7 +131,7 @@ DR-0.5 > Q-0.5 > H-0.5 > PRY-0.5
 
 基于 [碧蓝档案 WIKI 科研策略专题攻略 - 一图流 - 重装备策略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5#%E4%B8%80%E5%9B%BE%E6%B5%81) 的模板
 
-![](https://patchwiki.biligame.com/images/blhx/7/74/e2619kak8823p5oo3i6r7ybgqmu8uic.png)
+![一图流 - 重装备策略](https://patchwiki.biligame.com/images/blhx/7/74/e2619kak8823p5oo3i6r7ybgqmu8uic.png "https://patchwiki.biligame.com/images/blhx/7/74/e2619kak8823p5oo3i6r7ybgqmu8uic.png")
 
 #### 重装备模板
 
@@ -154,9 +157,9 @@ Q-0.5 > DR-0.5 > PRY-0.5
 
 ## 个人方案
 
-这是我个人目前使用的方案  
-基于慢均衡策略模板修改的  
-我希望在获得图纸的同时，能获取四期科研装备
+这是我个人目前使用的方案，基于慢均衡策略模板修改
+
+**期望**：在少量切魔方时，能大量获得图纸，且兼顾获取四期科研装备
 
 ### ALAS 科研设置
 
@@ -171,11 +174,12 @@ Q-0.5 > DR-0.5 > PRY-0.5
 - 自定义科研过滤器
 
 ```
-DR-0.5 > S4-Q-0.5 > S4-H-0.5 > PRY-0.5
-> DR-2.5 > DR-8 > DR-5 > PRY-2.5
-> S4-G-4 > S4-G-1.5 > S4-G-2.5 > S4-Q-1
-> PRY-5 > S4-Q-2 > PRY-8
-> 12
+DR-0.5 > S4-Q-0.5 > S4-H-0.5 > PRY-0.5 
+> DR-2.5 > DR-8 > DR-5 
+> PRY-2.5 > PRY-5 > PRY-8 
+> S4-Q-1 > S4-Q-2 > S4-Q-4 
+> S4-G-4 > G-4 > G-1.5 
+> C8 > C12 
 > reset > cheapest
 ```
 
