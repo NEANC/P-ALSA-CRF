@@ -66,9 +66,9 @@ PRY - 金船
   - 相当于 `Q1 > Q2 > T3 > T4 > Q4 > C6 > T6 > C8 > C12 > G1.5 > D2.5 > G2.5 > D5 > Q0.5 > G4 > D8 > H1 > H2 > H0.5 > D0.5 > H4`
 
 **注意**：  
-shortest 和 cheapest 必然会选择一个科研项目，在它们之后的内容将不会被执行。因此，建议科研过滤器以 `> reset > shortest ` 或 `> reset > cheapest ` 结尾，以保证充分利用刷新和防止空选。
+shortest 和 cheapest 必然会选择一个科研项目，在它们之后的内容将不会被执行。因此，建议科研过滤器以 `> reset > shortest` 或 `> reset > cheapest` 结尾，以保证充分利用刷新和防止空选。
 
-#### ALAS 默认自定义科研方案
+#### ALAS 默认自定义科研过滤器
 
 ```
 S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
@@ -172,7 +172,7 @@ Q-0.5 > DR-0.5 > PRY-0.5
 目前我的挂机时间段仅为**睡觉时**：`4-12H` 左右
 
 **期望**：  
-在少量切魔方时，能稳定获得图纸，且能稳定获取四期科研装备
+在少量切魔方时，能稳定获得图纸，且能稳定获取科研装备
 
 ### ALAS 科研设置
 
@@ -187,12 +187,12 @@ Q-0.5 > DR-0.5 > PRY-0.5
 - 自定义科研过滤器
 
 ```
-DR-0.5 > S4-Q-0.5 > PRY-0.5
+DR-0.5 > Q-0.5 > PRY-0.5
 > DR-2.5 > DR-8 > DR-5
 > PRY-2.5 > PRY-8 > PRY-5
 > S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4
 > C12
-> Q-0.5 > Q-4 > Q-2 > Q-1
+> Q-4 > Q-2 > Q-1
 > G-4 > E-2 > G-1.5
 > reset > cheapest
 ```
@@ -203,22 +203,22 @@ DR-0.5 > S4-Q-0.5 > PRY-0.5
 ---
 
 **说明**：  
-蓝图与 0.5 小时四期装备科研
+蓝图与 0.5 小时装备科研
 
 ```
-DR-0.5 > S4-Q-0.5 > PRY-0.5
+DR-0.5 > Q-0.5 > PRY-0.5
 > DR-2.5 > DR-8 > DR-5
 > PRY-2.5 > PRY-8 > PRY-5
 ```
 
-指定四期科研  
+指定的四期科研  
 `> S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4`
 
 指定 12 小时基本研究与任意装备科研
 
 ```
 > C12
-> Q-0.5 > Q-4 > Q-2 > Q-1
+> Q-4 > Q-2 > Q-1
 ```
 
 刷新用  
@@ -237,3 +237,48 @@ DR-0.5 > S4-Q-0.5 > PRY-0.5
 ## License
 
 [![CC-BY-NC-4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+---
+
+# 附加 - 委托过滤器
+
+文献来源:
+[增加委托过滤器预设 #1194](https://github.com/LmeSzinc/AzurLaneAutoScript/issues/1194)
+
+模板套用：  
+委托过滤器[魔方>石油>心智]
+
+```
+DailyEvent
+> Gem-8 > Gem-4 > Gem-2
+> ExtraCube-0:30 > DailyChip-2 > DailyChip-1
+> UrgentCube-1:30 > UrgentCube-1:45 > UrgentCube-3 > UrgentCube-2:15
+> ExtraCube-1:30 > ExtraCube-3 > UrgentCube-6 > UrgentCube-4
+> DailyResource-2 > DailyResource-1
+> Box-6 > Box-3 > Box-1
+> NightDrill-2:40 > NightDrill-3:20 > NightDrill-5:20
+> major
+> UrgentDrill-2 > UrgentDrill-4 > UrgentDrill-1:30
+> ExtraOil-1 > UrgentDrill-1 > UrgentDrill-1:10
+> ExtraOil-4 > ExtraOil-8
+> shortest
+```
+
+---
+
+ALAS 默认委托过滤器：
+
+```
+DailyEvent
+> Gem-8 > Gem-4 > Gem-2
+> NightDrill-8 > NightDrill-7 > NightDrill-6
+> ExtraDrill-0:20 > ExtraDrill-1 > ExtraDrill-2 > ExtraDrill-2:40 > ExtraDrill-3:20 > ExtraDrill-5:20
+> Box-6 > Box-3 > Box-1
+> DailyCube-0:30 > UrgentCube-1:30 > DailyCube-1:30 > UrgentCube-1:45 > UrgentCube-2:15 > UrgentCube-3
+> Major
+> DailyChip > DailyResource
+> UrgentBook-2:30 > UrgentBook-2 > UrgentBook-1:20 > UrgentBook-1:40
+> Daily-0:20 > Daily-0:30 > Daily-1:00 > Daily-1:30 > Daily-2:00
+> NightOil > NightCube
+> shortest
+```
