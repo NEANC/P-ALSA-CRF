@@ -169,13 +169,80 @@ Q-0.5 > DR-0.5 > PRY-0.5
 
 ## 个人方案
 
-这是我个人目前使用的方案，基于慢均衡策略模板修改  
-目前我的挂机时间段仅为**睡觉时**：`4-12H` 左右
+这是我个人目前使用的方案，基于重装备策略模板修改  
+目前我的挂机时间段为：`8-24H` 左右
 
 **期望**：  
-在少量切魔方时，能稳定获得图纸，且能稳定获取科研装备
+在少量切魔方时，能稳定获得科研装备，且兼顾获取图纸
 
 ### ALAS 科研设置
+
+| 设置项             | 选项                                  |
+| ------------------ | ------------------------------------- |
+| 使用魔方           | 总是使用                              |
+| 使用物质           | 总是使用                              |
+| 使用部件           | 总是使用/无项目可做时(部件不足时使用) |
+| 资源不足时延迟科研 | 勾选                                  |
+| 科研过滤器         | 自定义                                |
+
+- 自定义科研过滤器
+
+```
+Q-0.5 > DR-0.5 > PRY-0.5
+> S4-Q-4 > Q-4
+> S4-Q-2 > Q-2
+> S4-Q-1 > Q-1
+> S4-G-4 > G-4
+> G-1.5 > E-2
+> C12 > reset
+> DR-2.5 > PRY-2.5 > G-2.5
+> cheapest
+```
+
+**注意**：  
+如不想切魔方可在 **ALAS 科研设置** 内设置 **不使用魔方**
+
+---
+
+**说明**：  
+0.5 小时蓝图与装备科研
+
+```
+Q-0.5 > DR-0.5 > PRY-0.5
+```
+
+指定四期科研高于其他
+
+```
+> S4-Q-4 > Q-4
+> S4-Q-2 > Q-2
+> S4-Q-1 > Q-1
+> S4-G-4 > G-4
+```
+
+刷新用
+
+```
+> G-1.5 > E-2
+> C12 > reset
+> DR-2.5 > PRY-2.5 > G-2.5
+> cheapest
+```
+
+---
+
+## 文献来源
+
+- [碧蓝档案 WIKI 科研策略专题攻略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5)
+- [ALAS WIKI Research Filter String [CN]](https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_cn)
+
+## License
+
+[![CC-BY-NC-4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+---
+
+# 附加 - 已过期的自定义科研过滤器
 
 | 设置项             | 选项                                  |
 | ------------------ | ------------------------------------- |
@@ -227,17 +294,6 @@ DR-0.5 > Q-0.5 > PRY-0.5
 
 刷新重寻与最低消耗科研  
 `> reset > cheapest`
-
----
-
-## 文献来源
-
-- [碧蓝档案 WIKI 科研策略专题攻略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5)
-- [ALAS WIKI Research Filter String [CN]](https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_cn)
-
-## License
-
-[![CC-BY-NC-4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
 ---
 
