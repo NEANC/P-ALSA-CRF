@@ -14,7 +14,9 @@
 
 ### 属性
 
-`{series}-{genre}-{duration}`
+```
+{series}-{genre}-{duration}
+```
 
 ### Series - 科研期数
 
@@ -54,7 +56,9 @@ PRY - 金船
 
 ### Duration - 时间
 
-`0.5 、 1 、 1.5 、 2 、 2.5 、 3 、 4 、 5 、 6 、 8 、 10 、 12`
+```
+0.5 、 1 、 1.5 、 2 、 2.5 、 3 、 4 、 5 、 6 、 8 、 10 、 12
+```
 
 ### 内置名称
 
@@ -187,6 +191,83 @@ Q-0.5 > DR-0.5 > PRY-0.5
 - 自定义科研过滤器
 
 ```
+DR-0.5 > Q-0.5 > PRY-0.5
+> DR-2.5 > DR-8 > DR-5
+> PRY-2.5 > PRY-8 > PRY-5
+> S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4
+> C12
+> Q-4 > Q-2 > Q-1
+> G-4 > G-1.5
+> reset > cheapest
+```
+
+**注意**：  
+如不想切魔方可在 **ALAS 科研设置** 内设置 **不使用魔方**
+
+---
+
+**说明**：  
+蓝图与 0.5 小时装备科研
+
+```
+DR-0.5 > Q-0.5 > PRY-0.5
+> DR-2.5 > DR-8 > DR-5
+> PRY-2.5 > PRY-8 > PRY-5
+```
+
+指定的四期科研
+
+```
+> S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4
+```
+
+指定 12 小时基本研究与任意装备科研
+
+```
+> C12
+> Q-4 > Q-2 > Q-1
+```
+
+刷新用
+
+```
+> G-4 > G-1.5
+```
+
+刷新重寻与最低消耗科研
+
+```
+> reset > cheapest
+```
+
+---
+
+## 文献来源
+
+- [碧蓝档案 WIKI 科研策略专题攻略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5)
+- [ALAS WIKI Research Filter String [CN]](https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_cn)
+
+## License
+
+[![CC-BY-NC-4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+---
+
+# 附加 - 版本回滚的自定义科研过滤器
+
+本版本待优化，存在问题：与预期不符，等待后续编辑优化
+
+| 设置项             | 选项                                  |
+| ------------------ | ------------------------------------- |
+| 使用魔方           | 总是使用                              |
+| 使用物质           | 总是使用                              |
+| 使用部件           | 总是使用/无项目可做时(部件不足时使用) |
+| 资源不足时延迟科研 | 勾选                                  |
+| 科研过滤器         | 自定义                                |
+
+- 自定义科研过滤器
+
+```
 Q-0.5 > DR-0.5 > PRY-0.5
 > S4-Q-4 > Q-4
 > S4-Q-2 > Q-2
@@ -227,72 +308,6 @@ Q-0.5 > DR-0.5 > PRY-0.5
 > DR-2.5 > PRY-2.5 > G-2.5
 > cheapest
 ```
-
----
-
-## 文献来源
-
-- [碧蓝档案 WIKI 科研策略专题攻略](https://wiki.biligame.com/blhx/%E7%A7%91%E7%A0%94%E7%AD%96%E7%95%A5%E4%B8%93%E9%A2%98%E6%94%BB%E7%95%A5)
-- [ALAS WIKI Research Filter String [CN]](https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_cn)
-
-## License
-
-[![CC-BY-NC-4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
-
----
-
-# 附加 - 已过期的自定义科研过滤器
-
-| 设置项             | 选项                                  |
-| ------------------ | ------------------------------------- |
-| 使用魔方           | 总是使用                              |
-| 使用物质           | 总是使用                              |
-| 使用部件           | 总是使用/无项目可做时(部件不足时使用) |
-| 资源不足时延迟科研 | 勾选                                  |
-| 科研过滤器         | 自定义                                |
-
-- 自定义科研过滤器
-
-```
-DR-0.5 > Q-0.5 > PRY-0.5
-> DR-2.5 > DR-8 > DR-5
-> PRY-2.5 > PRY-8 > PRY-5
-> S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4
-> C12
-> Q-4 > Q-2 > Q-1
-> G-4 > E-2 > G-1.5
-> reset > cheapest
-```
-
-**注意**：  
-如不想切魔方可在 **ALAS 科研设置** 内设置 **不使用魔方**
-
----
-
-**说明**：  
-蓝图与 0.5 小时装备科研
-
-```
-DR-0.5 > Q-0.5 > PRY-0.5
-> DR-2.5 > DR-8 > DR-5
-> PRY-2.5 > PRY-8 > PRY-5
-```
-
-指定的四期科研  
-`> S4-Q-4 > S4-Q-2 > S4-Q-1 > S4-G-4`
-
-指定 12 小时基本研究与任意装备科研
-
-```
-> C12
-> Q-4 > Q-2 > Q-1
-```
-
-刷新用  
-`> G-4 > E-2 > G-1.5`
-
-刷新重寻与最低消耗科研  
-`> reset > cheapest`
 
 ---
 
